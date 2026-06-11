@@ -212,8 +212,9 @@ export {
   Tools,
   DataRenderers,
   Interactables,
-  useAssistantInteractable,
-  type AssistantInteractableProps,
+  useInteractable,
+  type InteractableConfig,
+  type InferInteractableState,
   useInteractableState,
   useToolArgsStatus,
   type ToolArgsStatus,
@@ -227,6 +228,12 @@ export type {
 } from "@assistant-ui/core";
 
 export { mergeModelContexts } from "@assistant-ui/core";
+
+export {
+  getInteractableSnapshots,
+  formatInteractableSnapshot,
+  type InteractableSnapshotEntry,
+} from "@assistant-ui/core";
 
 export type { Tool } from "assistant-stream";
 
