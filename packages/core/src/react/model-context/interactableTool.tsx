@@ -3,11 +3,11 @@ import type { Unstable_InteractableStateSchema } from "../types/scopes/interacta
 import type { ToolDefinition } from "./toolbox";
 import type { ToolCallMessagePartComponent } from "../types/MessagePartComponentTypes";
 import {
-  unstable_useInteractable,
+  unstable_useInteractable as useInteractable,
   type Unstable_InferInteractableState,
   type Unstable_InteractableVersionInfo,
 } from "./useInteractable";
-import { unstable_useInteractableState } from "./useInteractableState";
+import { unstable_useInteractableState as useInteractableState } from "./useInteractableState";
 
 export type Unstable_InteractableToolRenderProps<TState> = {
   /**
@@ -84,12 +84,11 @@ export const unstable_interactableTool = <
     initial: TState;
   }) => {
     const [state, { id: resolvedId, setState, version }] =
-      unstable_useInteractable(name, {
+      useInteractable(name, {
         id,
         description: config.description,
         stateSchema: config.stateSchema,
         initialState: initial,
-        scope: "thread",
         updateRender: UpdateToolUI,
       });
     return (
@@ -106,7 +105,7 @@ export const unstable_interactableTool = <
   };
 
   const StreamingUpdate = ({ id }: { id: string }) => {
-    const [state, { setState }] = unstable_useInteractableState<TState>(id);
+    const [state, { setState }] = useInteractableState<TState>(id);
     if (state === undefined) return null;
     return (
       <>
