@@ -1,6 +1,7 @@
 import { createMDX } from "fumadocs-mdx/next";
 import { withAui } from "@assistant-ui/next";
 import type { NextConfig } from "next";
+import path from "node:path";
 
 const isDev = process.env.NODE_ENV === "development";
 
@@ -25,6 +26,20 @@ const config: NextConfig = {
   transpilePackages: ["@assistant-ui/ui", "shiki"],
   serverExternalPackages: ["just-bash"],
   skipTrailingSlashRedirect: true,
+  webpack: (config) => {
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      "fumadocs-mdx:collections/server": path.resolve(
+        process.cwd(),
+        "./.source/server.ts",
+      ),
+      "fumadocs-mdx:collections/client": path.resolve(
+        process.cwd(),
+        "./.source/client.ts",
+      ),
+    };
+    return config;
+  },
   headers: async () => [
     {
       source: "/(.*)",
