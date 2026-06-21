@@ -1,5 +1,5 @@
 "use client";
 
-export function DemoHeader({ slug }: { slug: string }) {
+export function DemoHeader(_props: { slug: string }) {
   return null; // Header removed
 }
