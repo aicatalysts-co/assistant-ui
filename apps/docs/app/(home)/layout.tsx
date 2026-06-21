@@ -1,5 +1,4 @@
 import type { ReactNode } from "react";
-import { Header } from "@/components/shared/header";
 import { Footer } from "@/components/shared/footer";
 
 export default function Layout({
@@ -9,7 +8,6 @@ export default function Layout({
 }): React.ReactElement {
   return (
     <>
-      <Header />
       {children}
       <Footer />
     </>

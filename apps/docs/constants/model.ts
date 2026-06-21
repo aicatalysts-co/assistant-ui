@@ -14,7 +14,37 @@ export const MODELS = [
     disabled: false,
     contextWindow: 400_000,
   },
+  // Anthropic
+  {
+    name: "Claude 3.5 Sonnet",
+    value: "anthropic/claude-3-5-sonnet-latest",
+    icon: "/icons/anthropic.svg",
+    disabled: false,
+    contextWindow: 200_000,
+  },
+  {
+    name: "Claude 3.5 Haiku",
+    value: "anthropic/claude-3-5-haiku-latest",
+    icon: "/icons/anthropic.svg",
+    disabled: false,
+    contextWindow: 200_000,
+  },
   // Google
+  {
+    name: "Gemini 2.5 Flash",
+    value: "google/gemini-2.5-flash",
+    icon: "/icons/gemini.svg",
+    disabled: false,
+    contextWindow: 1_000_000,
+  },
+  {
+    name: "Gemini 2.5 Pro",
+    value: "google/gemini-2.5-pro",
+    icon: "/icons/gemini.svg",
+    disabled: false,
+    contextWindow: 2_000_000,
+  },
+  // Google AI Studio
   {
     name: "Gemini 3.1 Flash Lite",
     value: "google-ai-studio/gemini-3.1-flash-lite-preview",

@@ -94,7 +94,13 @@ export default function generativeLoader(
   // 1) Package indirection (resolved via the `react-server` condition).
   const variant = indirectionVariant(resourcePath);
   if (variant) {
-    const path = this.getOptions?.()?.path;
+    let path = this.getOptions?.()?.path;
+    if (!path && this.resourceQuery) {
+      const aui = new URLSearchParams(this.resourceQuery).get("aui");
+      if (aui) {
+        path = Buffer.from(aui, "base64url").toString("utf8");
+      }
+    }
     if (!path) {
       callback(
         new Error(

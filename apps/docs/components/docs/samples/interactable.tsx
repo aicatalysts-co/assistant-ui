@@ -19,7 +19,6 @@ import {
   WebSpeechSynthesisAdapter,
   WebSpeechDictationAdapter,
   SimpleImageAttachmentAdapter,
-  AssistantCloud,
   type FeedbackAdapter,
 } from "@assistant-ui/react";
 import { MarkdownTextPrimitive } from "@assistant-ui/react-markdown";
@@ -283,15 +282,6 @@ function InteractableRuntimeProvider({
 }: {
   children: React.ReactNode;
 }) {
-  const assistantCloud = useMemo(
-    () =>
-      new AssistantCloud({
-        baseUrl: process.env.NEXT_PUBLIC_ASSISTANT_BASE_URL!,
-        anonymous: true,
-      }),
-    [],
-  );
-
   const adapters = useMemo(
     () => ({
       speech: new WebSpeechSynthesisAdapter(),
@@ -305,7 +295,6 @@ function InteractableRuntimeProvider({
   const runtime = useChatRuntime({
     sendAutomaticallyWhen: lastAssistantMessageIsCompleteWithToolCalls,
     adapters,
-    cloud: assistantCloud,
   });
 
   const aui = useAui({

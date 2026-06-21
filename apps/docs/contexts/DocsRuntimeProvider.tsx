@@ -5,8 +5,6 @@ import {
   AssistantRuntimeProvider,
   WebSpeechSynthesisAdapter,
   WebSpeechDictationAdapter,
-  CloudFileAttachmentAdapter,
-  AssistantCloud,
   useAui,
   Tools,
   Suggestions,
@@ -29,30 +27,19 @@ export function DocsRuntimeProvider({
 }: {
   children: React.ReactNode;
 }) {
-  const assistantCloud = useMemo(
-    () =>
-      new AssistantCloud({
-        baseUrl: process.env.NEXT_PUBLIC_ASSISTANT_BASE_URL!,
-        anonymous: true,
-      }),
-    [],
-  );
-
   // Speech/dictation adapters keep internal state; create per component instance.
   const adapters = useMemo(
     () => ({
       speech: new WebSpeechSynthesisAdapter(),
       dictation: new WebSpeechDictationAdapter(),
       feedback: feedbackAdapter,
-      attachments: new CloudFileAttachmentAdapter(assistantCloud),
     }),
-    [assistantCloud],
+    [],
   );
 
   const runtime = useChatRuntime({
     sendAutomaticallyWhen: lastAssistantMessageIsCompleteWithToolCalls,
     adapters,
-    cloud: assistantCloud,
   });
 
   const aui = useAui({

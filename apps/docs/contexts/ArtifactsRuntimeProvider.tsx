@@ -4,7 +4,6 @@ import {
   AssistantRuntimeProvider,
   WebSpeechSynthesisAdapter,
   WebSpeechDictationAdapter,
-  AssistantCloud,
   useAui,
   Tools,
   AuiProvider,
@@ -43,18 +42,12 @@ export function ArtifactsRuntimeProvider({
 }: {
   children: React.ReactNode;
 }) {
-  const assistantCloud = new AssistantCloud({
-    baseUrl: process.env.NEXT_PUBLIC_ASSISTANT_BASE_URL!,
-    anonymous: true,
-  });
-
   const runtime = useChatRuntime({
     sendAutomaticallyWhen: lastAssistantMessageIsCompleteWithToolCalls,
     adapters: {
       speech: new WebSpeechSynthesisAdapter(),
       dictation: new WebSpeechDictationAdapter(),
     },
-    cloud: assistantCloud,
   });
 
   // Use the Tools API to register artifacts tools

@@ -2,8 +2,8 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "assistant-ui",
-    short_name: "assistant-ui",
+    name: "Barb Agent",
+    short_name: "Barb Agent",
     icons: [
       {
         src: "/web-app-manifest-192x192.png",

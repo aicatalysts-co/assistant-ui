@@ -9,6 +9,7 @@ import { MarkdownText } from "@/components/assistant-ui/markdown-text";
 import { DotMatrix } from "@/components/assistant-ui/dot-matrix";
 import { MessageTiming } from "@/components/assistant-ui/message-timing";
 import { ToolFallback } from "@/components/assistant-ui/tool-fallback";
+import { ThemeToggle } from "@/components/shared/theme-toggle";
 import {
   ToolGroupContent,
   ToolGroupRoot,
@@ -25,7 +26,7 @@ import {
 } from "@/components/assistant-ui/reasoning";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import icon from "@/public/favicon/icon.svg";
+import logoImg from "@/public/logo.png";
 import {
   ComposerQuotePreview,
   QuoteBlock,
@@ -92,16 +93,7 @@ import { docsModelOptions } from "@/components/docs/assistant/docs-model-options
 import { DEFAULT_MODEL_ID } from "@/constants/model";
 
 const Logo: FC = () => {
-  return (
-    <div className="flex items-center gap-2 px-2 text-sm font-medium">
-      <Image
-        src={icon}
-        alt="logo"
-        className="size-5 dark:hue-rotate-180 dark:invert"
-      />
-      <span className="text-foreground/90">assistant-ui</span>
-    </div>
-  );
+  return <Image src={logoImg} alt="logo" className="h-5 w-auto" />;
 };
 
 const Sidebar: FC<{ collapsed?: boolean }> = ({ collapsed }) => {
@@ -118,19 +110,7 @@ const Sidebar: FC<{ collapsed?: boolean }> = ({ collapsed }) => {
           collapsed ? "px-3.5" : "px-6",
         )}
       >
-        <Image
-          src={icon}
-          alt="logo"
-          className="size-5 shrink-0 dark:hue-rotate-180 dark:invert"
-        />
-        <span
-          className={cn(
-            "text-foreground/90 ml-2 text-sm font-medium whitespace-nowrap transition-opacity duration-200",
-            collapsed && "opacity-0",
-          )}
-        >
-          assistant-ui
-        </span>
+        <Image src={logoImg} alt="logo" className="h-5 w-auto shrink-0" />
       </div>
       {collapsed ? (
         <ThreadListPrimitive.New asChild>
@@ -223,6 +203,7 @@ const Header: FC<{
         <PanelLeftIcon className="size-4" />
       </TooltipIconButton>
       <ThreadTitle />
+
       <TooltipIconButton
         variant="ghost"
         size="icon"
@@ -233,6 +214,7 @@ const Header: FC<{
       >
         <ShareIcon className="size-4" />
       </TooltipIconButton>
+      <ThemeToggle />
     </header>
   );
 };

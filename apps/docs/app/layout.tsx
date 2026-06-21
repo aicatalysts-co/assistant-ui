@@ -29,29 +29,29 @@ export const viewport = {
 export const metadata = {
   metadataBase: getMetadataBase(),
   title: {
-    template: "%s — assistant-ui",
-    default: "assistant-ui - React Chat UI for AI Apps",
+    template: "%s — Barb Agent",
+    default: "Barb Agent",
   },
   description:
     "Open-source React components and runtimes for building AI chat — ChatGPT-style UIs, copilots, and agents in TypeScript with streaming, tools, and persistence.",
   openGraph: {
-    title: "assistant-ui",
+    title: "Barb Agent",
     description:
       "Open-source React components and runtimes for building AI chat — ChatGPT-style UIs, copilots, and agents in TypeScript with streaming, tools, and persistence.",
-    siteName: "assistant-ui",
+    siteName: "Barb Agent",
     type: "website",
     images: [
       {
         url: "/api/og?variant=home",
         width: 1200,
         height: 630,
-        alt: "assistant-ui",
+        alt: "Barb Agent",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "assistant-ui",
+    title: "Barb Agent",
     description:
       "Open-source React components and runtimes for building AI chat — ChatGPT-style UIs, copilots, and agents in TypeScript with streaming, tools, and persistence.",
     images: ["/api/og?variant=home"],
@@ -66,12 +66,13 @@ export default function Layout({ children }: { children: ReactNode }) {
           crossOrigin="anonymous"
           src="//unpkg.com/react-scan/dist/auto.global.js"
         />*/}
-        <script
+        <link rel="icon" href="/favicon/favicon.png" type="image/png" />
+        <Script
           defer
           src="/umami/script.js"
           data-website-id="6f07c001-46a2-411f-9241-4f7f5afb60ee"
           data-domains="www.assistant-ui.com"
-        ></script>
+        />
         <Script
           id="vector-script"
           dangerouslySetInnerHTML={{

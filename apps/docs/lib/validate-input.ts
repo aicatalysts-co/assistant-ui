@@ -32,7 +32,11 @@ function measureMessageChars(messages: unknown[]): {
   let maxChars = 0;
 
   for (const msg of messages) {
-    const len = JSON.stringify(msg).length;
+    const cleanedString = JSON.stringify(msg).replace(
+      /"data:[^;]+;base64,[^"]+"/g,
+      '"[attachment]"',
+    );
+    const len = cleanedString.length;
     totalChars += len;
     if (len > maxChars) maxChars = len;
   }

@@ -180,7 +180,21 @@ export function toToolsJSONSchema(
         name,
         {
           ...(tool.description && { description: tool.description }),
-          parameters: toJSONSchema(tool.parameters),
+          parameters: (() => {
+            const schema = toJSONSchema(tool.parameters);
+            if (schema.properties && typeof schema.properties === "object") {
+              const newProps: Record<string, any> = {};
+              for (const [key, value] of Object.entries(schema.properties)) {
+                if (key === "$type") {
+                  newProps["type"] = value;
+                } else {
+                  newProps[key] = value;
+                }
+              }
+              return { ...schema, properties: newProps };
+            }
+            return schema;
+          })(),
           ...(tool.providerOptions && {
             providerOptions: tool.providerOptions,
           }),
