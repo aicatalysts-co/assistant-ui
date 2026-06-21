@@ -1,5 +1,16 @@
 # @assistant-ui/react-langgraph
 
+## 0.14.10
+
+### Patch Changes
+
+- [#4497](https://github.com/assistant-ui/assistant-ui/pull/4497) [`ddc40b7`](https://github.com/assistant-ui/assistant-ui/commit/ddc40b7791563057749ecf1121e15d19574479ff) - fix: tolerate reasoning and image content blocks that omit their declared fields ([@okisdev](https://github.com/okisdev))
+
+- [#4471](https://github.com/assistant-ui/assistant-ui/pull/4471) [`f806f73`](https://github.com/assistant-ui/assistant-ui/commit/f806f7338adefd395ddab6717e73f5004e7b90e8) - refactor: adopt the shared createRuntimeExtras helper and split useLangGraphRuntime.ts into hooks/types/converter/helper modules, with no public API or behavior change ([@okisdev](https://github.com/okisdev))
+
+- Updated dependencies [[`ddc40b7`](https://github.com/assistant-ui/assistant-ui/commit/ddc40b7791563057749ecf1121e15d19574479ff), [`ea52de0`](https://github.com/assistant-ui/assistant-ui/commit/ea52de06368853b7af7ac6755b157ec5305a8494), [`3a8f685`](https://github.com/assistant-ui/assistant-ui/commit/3a8f685e23a3e7ad76ac41e3ce6fff05714e04d3)]:
+  - @assistant-ui/core@0.2.19
+
 ## 0.14.9
 
 ### Patch Changes

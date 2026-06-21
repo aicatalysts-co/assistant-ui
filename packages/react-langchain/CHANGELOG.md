@@ -1,5 +1,24 @@
 # @assistant-ui/react-langchain
 
+## 0.0.17
+
+### Patch Changes
+
+- [#4497](https://github.com/assistant-ui/assistant-ui/pull/4497) [`ddc40b7`](https://github.com/assistant-ui/assistant-ui/commit/ddc40b7791563057749ecf1121e15d19574479ff) - fix: tolerate reasoning and image content blocks that omit their declared fields ([@okisdev](https://github.com/okisdev))
+
+- [#4503](https://github.com/assistant-ui/assistant-ui/pull/4503) [`99bf3fb`](https://github.com/assistant-ui/assistant-ui/commit/99bf3fbc7ae79f03336cc1c9b0e966cb32e701d3) - feat(react-langchain): render generative UI from graph state ([@ShobhitPatra](https://github.com/ShobhitPatra))
+
+- [#4476](https://github.com/assistant-ui/assistant-ui/pull/4476) [`e80f7ff`](https://github.com/assistant-ui/assistant-ui/commit/e80f7ff928928c2c46126253d2526608ae1d5a6c) - feat(react-langchain): add useLangChainInterrupts reader for pending interrupts ([@ShobhitPatra](https://github.com/ShobhitPatra))
+
+- [#4448](https://github.com/assistant-ui/assistant-ui/pull/4448) [`b3ac74b`](https://github.com/assistant-ui/assistant-ui/commit/b3ac74b39d93429ad58b58bd5f9a50a371ace7a2) - feat(react-langchain): regenerate via checkpoint fork ([@ShobhitPatra](https://github.com/ShobhitPatra))
+
+- [#4467](https://github.com/assistant-ui/assistant-ui/pull/4467) [`0749c94`](https://github.com/assistant-ui/assistant-ui/commit/0749c94139fa94b51ab96f6d84fa72e4203a6fe3) - refactor: split the useStreamRuntime file into hooks/types/converter modules and adopt the shared createRuntimeExtras helper ([@okisdev](https://github.com/okisdev))
+
+- [#4462](https://github.com/assistant-ui/assistant-ui/pull/4462) [`befc022`](https://github.com/assistant-ui/assistant-ui/commit/befc0223f6b3ffd72710fc422124ac66cc024a2a) - feat(react-langchain): resume parallel interrupts via useLangChainRespondAll ([@ShobhitPatra](https://github.com/ShobhitPatra))
+
+- Updated dependencies [[`ddc40b7`](https://github.com/assistant-ui/assistant-ui/commit/ddc40b7791563057749ecf1121e15d19574479ff), [`ea52de0`](https://github.com/assistant-ui/assistant-ui/commit/ea52de06368853b7af7ac6755b157ec5305a8494), [`3a8f685`](https://github.com/assistant-ui/assistant-ui/commit/3a8f685e23a3e7ad76ac41e3ce6fff05714e04d3)]:
+  - @assistant-ui/core@0.2.19
+
 ## 0.0.16
 
 ### Patch Changes

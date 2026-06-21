@@ -1,5 +1,14 @@
 # assistant-ui
 
+## 0.0.104
+
+### Patch Changes
+
+- [#4494](https://github.com/assistant-ui/assistant-ui/pull/4494) [`5e8a4e2`](https://github.com/assistant-ui/assistant-ui/commit/5e8a4e2a4c4bb4ba2aa963eb2f63da521a29bf78) - cli: rename the langgraph starter template flag to `-t langchain` so it matches the react-langchain adapter it actually scaffolds. `-t langgraph` no longer resolves; use `-t langchain` instead. ([@okisdev](https://github.com/okisdev))
+
+- Updated dependencies []:
+  - @assistant-ui/agent-launcher@0.1.7
+
 ## 0.0.103
 
 ### Patch Changes

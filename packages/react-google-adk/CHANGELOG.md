@@ -1,5 +1,14 @@
 # @assistant-ui/react-google-adk
 
+## 0.0.16
+
+### Patch Changes
+
+- [#4475](https://github.com/assistant-ui/assistant-ui/pull/4475) [`4b22e39`](https://github.com/assistant-ui/assistant-ui/commit/4b22e393fc2755e19f78fc4ebe24ac6b42c09dee) - refactor: adopt the shared createRuntimeExtras helper and move the extras type into types.ts, with no public API or behavior change ([@okisdev](https://github.com/okisdev))
+
+- Updated dependencies [[`ddc40b7`](https://github.com/assistant-ui/assistant-ui/commit/ddc40b7791563057749ecf1121e15d19574479ff), [`ea52de0`](https://github.com/assistant-ui/assistant-ui/commit/ea52de06368853b7af7ac6755b157ec5305a8494), [`3a8f685`](https://github.com/assistant-ui/assistant-ui/commit/3a8f685e23a3e7ad76ac41e3ce6fff05714e04d3)]:
+  - @assistant-ui/core@0.2.19
+
 ## 0.0.15
 
 ### Patch Changes

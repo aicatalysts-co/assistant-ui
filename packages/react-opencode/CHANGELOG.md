@@ -1,5 +1,16 @@
 # @assistant-ui/react-opencode
 
+## 0.2.10
+
+### Patch Changes
+
+- [#4472](https://github.com/assistant-ui/assistant-ui/pull/4472) [`ff16a47`](https://github.com/assistant-ui/assistant-ui/commit/ff16a473419c567cf53226b8869f6fa7e6ad1e10) - fix: restore the type exports that the previous refactor trimmed from the public barrel; removing a shipped export is a breaking change for npm consumers, even when no in-repo consumer imports it ([@okisdev](https://github.com/okisdev))
+
+- [#4470](https://github.com/assistant-ui/assistant-ui/pull/4470) [`d98cfef`](https://github.com/assistant-ui/assistant-ui/commit/d98cfef9d0e65e1282ce789fbca90559c063acdb) - refactor: adopt the shared createRuntimeExtras helper, move the accessor hooks into hooks.ts, extract the thread-list adapter, and trim unused internal type and SDK re-exports from the public barrel ([@okisdev](https://github.com/okisdev))
+
+- Updated dependencies [[`ddc40b7`](https://github.com/assistant-ui/assistant-ui/commit/ddc40b7791563057749ecf1121e15d19574479ff), [`ea52de0`](https://github.com/assistant-ui/assistant-ui/commit/ea52de06368853b7af7ac6755b157ec5305a8494), [`3a8f685`](https://github.com/assistant-ui/assistant-ui/commit/3a8f685e23a3e7ad76ac41e3ce6fff05714e04d3)]:
+  - @assistant-ui/core@0.2.19
+
 ## 0.2.9
 
 ### Patch Changes

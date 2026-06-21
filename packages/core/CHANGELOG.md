@@ -1,5 +1,15 @@
 # @assistant-ui/core
 
+## 0.2.19
+
+### Patch Changes
+
+- [#4497](https://github.com/assistant-ui/assistant-ui/pull/4497) [`ddc40b7`](https://github.com/assistant-ui/assistant-ui/commit/ddc40b7791563057749ecf1121e15d19574479ff) - fix: tolerate reasoning and image content blocks that omit their declared fields ([@okisdev](https://github.com/okisdev))
+
+- [#4466](https://github.com/assistant-ui/assistant-ui/pull/4466) [`ea52de0`](https://github.com/assistant-ui/assistant-ui/commit/ea52de06368853b7af7ac6755b157ec5305a8494) - refactor: add an internal createRuntimeExtras helper shared by external-store adapter authors ([@okisdev](https://github.com/okisdev))
+
+- [#4482](https://github.com/assistant-ui/assistant-ui/pull/4482) [`3a8f685`](https://github.com/assistant-ui/assistant-ui/commit/3a8f685e23a3e7ad76ac41e3ce6fff05714e04d3) - feat: add `onThreadIdChange` to the remote thread list runtime so `threadId` can be used as a managed/controlled value (e.g. synced to a URL). Only the settled remote ID is emitted; the transient optimistic local ID is never surfaced. ([@Yonom](https://github.com/Yonom))
+
 ## 0.2.18
 
 ### Patch Changes

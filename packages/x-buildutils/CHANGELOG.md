@@ -1,5 +1,11 @@
 # @assistant-ui/x-buildutils
 
+## 0.0.16
+
+### Patch Changes
+
+- [#4484](https://github.com/assistant-ui/assistant-ui/pull/4484) [`10f2009`](https://github.com/assistant-ui/assistant-ui/commit/10f200961afd520eeaf1a339c12f4ca766f959d6) - Resolve bundled ambient types from hoisted monorepo installs. ([@Yonom](https://github.com/Yonom))
+
 ## 0.0.15
 
 ### Patch Changes

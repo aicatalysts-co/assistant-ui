@@ -1,5 +1,14 @@
 # @assistant-ui/react-a2a
 
+## 0.2.21
+
+### Patch Changes
+
+- [#4473](https://github.com/assistant-ui/assistant-ui/pull/4473) [`19d2752`](https://github.com/assistant-ui/assistant-ui/commit/19d275238b00795127599f3dc966c46d12fde645) - refactor: adopt the shared createRuntimeExtras helper and move the accessor hooks and option/extras types into hooks.ts and types.ts, with no public API or behavior change ([@okisdev](https://github.com/okisdev))
+
+- Updated dependencies [[`ddc40b7`](https://github.com/assistant-ui/assistant-ui/commit/ddc40b7791563057749ecf1121e15d19574479ff), [`ea52de0`](https://github.com/assistant-ui/assistant-ui/commit/ea52de06368853b7af7ac6755b157ec5305a8494), [`3a8f685`](https://github.com/assistant-ui/assistant-ui/commit/3a8f685e23a3e7ad76ac41e3ce6fff05714e04d3)]:
+  - @assistant-ui/core@0.2.19
+
 ## 0.2.20
 
 ### Patch Changes
