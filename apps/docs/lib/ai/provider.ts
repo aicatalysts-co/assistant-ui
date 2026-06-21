@@ -5,16 +5,21 @@ import { resolveModelId } from "@/constants/model";
 
 export const openai = createOpenAI({
   apiKey: process.env.OPENAI_API_KEY || "placeholder",
-  baseURL: process.env.OPENAI_BASE_URL || undefined,
+  ...(process.env.OPENAI_BASE_URL
+    ? { baseURL: process.env.OPENAI_BASE_URL }
+    : {}),
 });
 
 export const anthropic = createAnthropic({
-  apiKey: process.env.ANTHROPIC_API_KEY,
+  ...(process.env.ANTHROPIC_API_KEY
+    ? { apiKey: process.env.ANTHROPIC_API_KEY }
+    : {}),
 });
 
+const googleApiKey =
+  process.env.GOOGLE_GENERATIVE_AI_API_KEY || process.env.GEMINI_API_KEY;
 export const google = createGoogleGenerativeAI({
-  apiKey:
-    process.env.GOOGLE_GENERATIVE_AI_API_KEY || process.env.GEMINI_API_KEY,
+  ...(googleApiKey ? { apiKey: googleApiKey } : {}),
 });
 
 export function getModel(modelId?: string) {
