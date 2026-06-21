@@ -56,8 +56,10 @@ await build({
     : {}),
   platform: "neutral",
   unbundle: true,
-  deps: { neverBundle: /^node:/, skipNodeModulesBundle: true },
-  external: [/^#/, new RegExp(`^${pkg.name}(/|$)`)],
+  deps: {
+    neverBundle: [/^node:/, /^#/, new RegExp(`^${pkg.name}(/|$)`)],
+    skipNodeModulesBundle: true,
+  },
   // Skip declaration files in dev for faster reloads.
   dts: isDev ? false : { sourcemap: true },
   sourcemap: true,
